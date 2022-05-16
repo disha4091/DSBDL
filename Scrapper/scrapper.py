@@ -1,9 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-webpage = requests.get('https://www.banggood.in/search/video-games.html?from=nav') 
 
-sp = BeautifulSoup(webpage.content, 'html.parser')
+
+HTMLFileToBeOpened = open("data.html", encoding="utf8")
+  
+# Reading the file and storing in a variable
+contents = HTMLFileToBeOpened.read()
+
+sp = BeautifulSoup(contents, 'html.parser')
+# webpage = requests.get('https://www.banggood.in/search/video-games.html?from=nav') 
 
 # print(sp.text)
 
